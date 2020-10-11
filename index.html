@@ -92,24 +92,30 @@
             <form>
                 <div class="feetToSmoots" type='twin-formatting'>
                 <h2>Submit amount of feet</h2>
-                <h3>To convert to smoots</h3>
+                <h3>to convert to smoots</h3>
                 <input id="entry1">
                 <br>
+                <br>
                 <button class="btn btn-primary" onclick="convertToSmoots(); return false;">Submit</button>
-                <h2>The amount of smoots is</h2>
-                <h3 id="convertedSmoots">_____</h3>
+                <br>
+                <br>
+                <h3 id="convertedSmoots"></h3>
+                <h3 id="plusOrMinus1"></h3>
                 </form>
                 </div>
 
                 <form>
                     <div class="smootsToFeet" type='twin-formatting'>
                     <h2>Submit amount of smoots</h2>
-                    <h3>To convert to feet</h3>
+                    <h3>to convert to feet</h3>
                     <input id="entry2">
                     <br>
+                    <br>
                     <button class="btn btn-primary" onclick="convertToFeet(); return false;">Submit</button>
-                    <h2>The amount of feet is</h2>
-                    <h3 id="convertedFeet">_____</h3>
+                    <br>
+                    <br>
+                    <h3 id="convertedFeet"></h3>
+                    <h3 id="plusOrMinus2"></h3>
                     </form>
                     </div>
            
@@ -132,7 +138,12 @@ var feetInput = document.getElementById("entry1").value;
 
  var convertedSmoots = intermediate2 / 67;
 
-document.getElementById("convertedSmoots").innerHTML = convertedSmoots;
+ var roundedSmoots = convertedSmoots.toFixed(2);
+
+ document.getElementById("convertedSmoots").innerHTML = feetInput + " feet is " + roundedSmoots + " smoots";
+ 
+ document.getElementById("plusOrMinus1").innerHTML = "plus or minus one ear";
+
 
 }
 
@@ -146,8 +157,9 @@ function convertToFeet() {
 
     var convertedFeet = intermediate2 / 12;
 
-    document.getElementById("convertedFeet").innerHTML = convertedFeet;
+    var roundedFeet = convertedFeet.toFixed(2);
 
+    document.getElementById("convertedFeet").innerHTML = smootsInput + " smoots is " + roundedFeet + " feet";
 }
 
 
