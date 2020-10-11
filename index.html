@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+    body {
+        background-color: #E3F2E6!important;
+    }
+
+    .header {
+        background-color: #F4D3CC;
+        max-width: 70%;
+        margin: auto;
+        text-align: center;
+        padding: 23px 20px 20px 20px;
+        
+    }
+
+
+
+    .history{
+        background-color: #FDEFEC;
+        max-width: 70%;
+        margin: auto;
+        padding: 10px 40px 40px 40px;
+        text-align: center;
+
+    }
+    
+
+
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoots Converter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+    
+</head>
+    
+    <body>
+    
+    <script src="scripts.js"></script> 
+        <br>
+    <div class="header">
+        <h1><strong>Smoots Converter</strong></h1>
+    </div>
+
+    <div class="history">
+    
+    <br>
+    <h2>A brief history of the Smoot</h2>
+    <br>
+    <p>Oliver R. Smoot is an MIT graduate and former head of the American National Standards Institute (ANSI) and 
+        the International Organization for Standards (ISO).
+
+        In 1958, as part of his initiation into ΛXA, Smoot and his brothers measured the entire length of Harvard Bridge over the Charles River 
+        in Cambridge, MA, using Smoot’s body as the ruler. He was at the time 170 cm tall (5 feet, 7 inches), and the bridge was declared to be 364.4 Smoots, 
+        "plus or minus one ear" (about 2035 feet or 650.7 meters). Since that time, 
+        the measurement of Harvard Bridge has always been denominated in Smoots, with the markings repainted each year by
+        the incoming ΛXA pledge class at MIT. The Cambridge police use the Smoot markings to identify the location of accidents on the bridge.</p>
+    </div>
+
+        <div class = "converter"> 
+            <form>
+
+                <h2>Submit amount of feet</h2>
+                <h3>To convert to smoots</h3>
+                <input id="entry">
+                <br>
+                <button class="btn btn-primary" onclick="convertFeet(); return false;">Submit</button>
+                <h2>The amount of feet is</h2>
+                <h3 id="convertedSmoots"></h3>
+
+            </form>
+            
+
+        </div>
+</body>
+</html>
