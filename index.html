@@ -2,29 +2,54 @@
 <html lang="en">
 <style>
 
+    [type='basic-formatting'] {
+
+        max-width: 70%;
+        margin: auto;
+        text-align: center;
+
+    }
+
     body {
         background-color: #E3F2E6!important;
     }
 
     .header {
         background-color: #F4D3CC;
-        max-width: 70%;
-        margin: auto;
-        text-align: center;
+
+        
         padding: 23px 20px 20px 20px;
         
     }
 
-
-
     .history{
         background-color: #FDEFEC;
-        max-width: 70%;
-        margin: auto;
         padding: 10px 40px 40px 40px;
-        text-align: center;
+        
 
     }
+
+    section {
+      type='basic-formatting'
+    }
+
+    [type='twin-formatting'] {
+        max-width: 40%;
+        background-color: #F4D3CC;
+        margin: 5%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .feetToSmoots{
+        float: left;
+
+    }
+    .smootsToFeet{
+        float: left;
+
+    }
+
     
 
 
@@ -43,14 +68,15 @@
     
     <script src="scripts.js"></script> 
         <br>
-    <div class="header">
+    <div class="header" type='basic-formatting'>
         <h1><strong>Smoots Converter</strong></h1>
+        <p>Convert from feet to Smoots and vice versa</p>
     </div>
 
-    <div class="history">
+    <div class="history" type='basic-formatting'>
     
     <br>
-    <h2>A brief history of the Smoot</h2>
+    <h2>A Brief History of the Smoot</h2>
     <br>
     <p>Oliver R. Smoot is an MIT graduate and former head of the American National Standards Institute (ANSI) and 
         the International Organization for Standards (ISO).
@@ -62,20 +88,71 @@
         the incoming ΛXA pledge class at MIT. The Cambridge police use the Smoot markings to identify the location of accidents on the bridge.</p>
     </div>
 
-        <div class = "converter"> 
+        <section> 
             <form>
-
+                <div class="feetToSmoots" type='twin-formatting'>
                 <h2>Submit amount of feet</h2>
                 <h3>To convert to smoots</h3>
-                <input id="entry">
+                <input id="entry1">
                 <br>
-                <button class="btn btn-primary" onclick="convertFeet(); return false;">Submit</button>
-                <h2>The amount of feet is</h2>
-                <h3 id="convertedSmoots"></h3>
+                <button class="btn btn-primary" onclick="convertToSmoots(); return false;">Submit</button>
+                <h2>The amount of smoots is</h2>
+                <h3 id="convertedSmoots">_____</h3>
+                </form>
+                </div>
 
-            </form>
+                <form>
+                    <div class="smootsToFeet" type='twin-formatting'>
+                    <h2>Submit amount of smoots</h2>
+                    <h3>To convert to feet</h3>
+                    <input id="entry2">
+                    <br>
+                    <button class="btn btn-primary" onclick="convertToFeet(); return false;">Submit</button>
+                    <h2>The amount of feet is</h2>
+                    <h3 id="convertedFeet">_____</h3>
+                    </form>
+                    </div>
+           
             
 
-        </div>
+            </section>
+
 </body>
 </html>
+
+<script>
+
+function convertToSmoots() {
+
+var feetInput = document.getElementById("entry1").value;
+
+ var intermediate1 = parseInt(feetInput);
+
+ var intermediate2 = intermediate1 * 12;
+
+ var convertedSmoots = intermediate2 / 67;
+
+document.getElementById("convertedSmoots").innerHTML = convertedSmoots;
+
+}
+
+function convertToFeet() {
+
+    var smootsInput = document.getElementById("entry2").value;
+
+    var intermediate1 = parseInt(smootsInput);
+
+    var intermediate2 = intermediate1 * 67;
+
+    var convertedFeet = intermediate2 / 12;
+
+    document.getElementById("convertedFeet").innerHTML = convertedFeet;
+
+}
+
+
+
+
+
+
+</script>
