@@ -10,6 +10,11 @@
 
     }
 
+    .container{
+        max-width: 300px;
+        text-align: center;
+        }
+
     body {
         background-color: #E3F2E6!important;
     }
@@ -29,8 +34,14 @@
 
     }
 
-    section {
-      type='basic-formatting'
+    .feetToSmoots{
+        float: left;
+        
+
+    }
+    .smootsToFeet{
+        float: right;
+
     }
 
     [type='twin-formatting'] {
@@ -39,16 +50,9 @@
         margin: 5%;
         padding: 15px;
         text-align: center;
+        display: inline-block;
     }
 
-    .feetToSmoots{
-        float: left;
-
-    }
-    .smootsToFeet{
-        float: left;
-
-    }
 
     
 
@@ -88,7 +92,7 @@
         the incoming ΛXA pledge class at MIT. The Cambridge police use the Smoot markings to identify the location of accidents on the bridge.</p>
     </div>
 
-        <section> 
+        <div class="container"> 
             <form>
                 <div class="feetToSmoots" type='twin-formatting'>
                 <h2>Submit amount of feet</h2>
@@ -121,7 +125,7 @@
            
             
 
-            </section>
+                </div>
 
 </body>
 </html>
@@ -144,6 +148,8 @@ var feetInput = document.getElementById("entry1").value;
  
  document.getElementById("plusOrMinus1").innerHTML = "plus or minus one ear";
 
+ document.getElementById("entry1").value = "";
+
 
 }
 
@@ -160,6 +166,8 @@ function convertToFeet() {
     var roundedFeet = convertedFeet.toFixed(2);
 
     document.getElementById("convertedFeet").innerHTML = smootsInput + " smoots is " + roundedFeet + " feet";
+
+    document.getElementById("entry2").value = "";
 }
 
 
